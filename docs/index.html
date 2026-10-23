@@ -11,8 +11,44 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <style>html,body{margin:0;background:#000}</style>
+<!-- Password gate: a light lock, not security. The password is NP_PASS below; change it there. -->
+<script>var NP_PASS='x-fader';try{if(localStorage.getItem('np-pass')!==NP_PASS)document.documentElement.className+=' np-locked'}catch(e){document.documentElement.className+=' np-locked'}</script>
+<style>
+.np-locked #noupix{display:none}
+#np-gate{display:none}
+.np-locked #np-gate{display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px 16px;box-sizing:border-box;background:#000;color:#f0f0f0;font-family:"Saira",system-ui,-apple-system,"Segoe UI",sans-serif}
+#np-gate form{width:100%;max-width:340px;display:flex;flex-direction:column;gap:14px}
+#np-gate h1{margin:0;font:700 28px/1 "Chakra Petch","Saira",system-ui,sans-serif;letter-spacing:.02em}
+#np-gate p{margin:0;color:#8e8e8e;font:300 13px/1.5 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+#np-gate input{background:#080808;border:1px solid #3a3a3a;color:#f0f0f0;font:400 16px/1 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;padding:12px 14px;outline:none;border-radius:0}
+#np-gate input:focus{border-color:#bdbdbd}
+#np-gate button{background:#ff3b3b;border:0;color:#000;font:700 14px/1 "Chakra Petch","Saira",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:14px;cursor:pointer}
+#np-gate .np-err{color:#ff3b3b;min-height:1.5em}
+</style>
 </head>
 <body>
+<div id="np-gate">
+  <form autocomplete="off">
+    <h1>nouPix</h1>
+    <p>This page isn't public yet. Enter the password to continue.</p>
+    <input type="password" aria-label="Password" placeholder="Password" autofocus>
+    <button type="submit">Enter</button>
+    <p class="np-err" aria-live="polite"></p>
+  </form>
+</div>
+<script>
+(function () {
+  var f = document.querySelector('#np-gate form'), i = f.querySelector('input'), err = f.querySelector('.np-err');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (i.value.trim().toLowerCase() === NP_PASS) {
+      try { localStorage.setItem('np-pass', NP_PASS); } catch (x) {}
+      document.documentElement.className = document.documentElement.className.replace(/\s*np-locked/g, '');
+      window.dispatchEvent(new Event('resize'));   // the LED canvases measure themselves once visible
+    } else { err.textContent = 'Wrong password'; i.select(); }
+  });
+})();
+</script>
 <!-- nouPix product page · noupix.nouled.com
      The GitHub repo for releases, source, manuals and issues is set ONCE, in data-repo below.
      Every GitHub link on the page is built from it (and also written out in full, so the page works without JavaScript:
