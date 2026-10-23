@@ -240,7 +240,8 @@
 @media (max-width:560px){#noupix .np-dl{grid-template-columns:minmax(0,1fr)}}
 
 /* support */
-#noupix .np-help{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#noupix .np-help{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1200px){#noupix .np-help{grid-template-columns:repeat(2,minmax(0,1fr))}}
 #noupix .np-help a{display:flex;flex-direction:column;gap:10px;padding:28px 26px;border:1px solid var(--line2);background:var(--bg1);transition:border-color .15s}
 #noupix .np-help a:hover{border-color:var(--text2)}
 #noupix .np-help b{font:700 20px/1.15 var(--label);letter-spacing:.04em;text-transform:uppercase}
@@ -466,10 +467,11 @@
             <li>Scenes per zone with crossfades; the fade time sits on each scene</li>
             <li>Playlists of scenes with play times: in a loop, once, or handing over to another</li>
             <li>Keys 1–9 play the scenes of the selected zone; a separate Scenes window for a second screen</li>
+            <li><b>X-Fader</b>: one fader between two zones, with a live preview of each; Mix, Dip or Cut</li>
           </ul>
         </div>
         <figure>
-          <div class="np-media np-cut"><img src="img/feature-scenes.webp" width="1572" height="416" loading="lazy" alt="The Scenes panel: the zones Diamond and Prism with five scenes each, their fade times and a Show playlist under each zone"></div>
+          <div class="np-media np-cut"><img src="img/feature-scenes.webp" width="1572" height="453" loading="lazy" alt="The Scenes panel: the zones Diamond and Prism with five scenes each, their fade times and a Show playlist under each zone; at the bottom the X-Fader, with the previews of Diamond (A) and Prism (B) and its fader a third of the way across"></div>
         </figure>
       </article>
 
@@ -500,7 +502,7 @@
           <h3>Learn your controller in a second</h3>
           <p>Press Learn, move a fader, click what it should move.</p>
           <ul class="np-list">
-            <li>Master, blackout, group dimmers, zone levels, scenes and playlists</li>
+            <li>Master, blackout, the X-Fader, group dimmers, zone levels, scenes and playlists</li>
             <li>Macros and any control of an effect; faders pick up where the slider is</li>
             <li>Every mapping as a wire in the patch bay</li>
             <li>No controller at hand? A virtual one on screen</li>
@@ -518,7 +520,7 @@
           <h3>Hand a phone to the end user</h3>
           <p>The people who run the place get the buttons they need, not the mapping. Phones, tablets and other computers on the network log in with a role.</p>
           <ul class="np-list">
-            <li><em>Remote</em>: a simple page to play scenes and playlists and dim each zone</li>
+            <li><em>Remote</em>: a simple page to play scenes and playlists and dim each zone, and the X-Fader when you choose</li>
             <li><em>Operator</em>: content, scenes and playlists; the mapping stays locked</li>
             <li><em>Programmer</em>: everything, with a password</li>
             <li>The phone page installs like an app</li>
@@ -658,6 +660,9 @@
         <a class="np-cut" data-np-href="/issues/new?labels=enhancement&amp;title=Idea%3A%20" href="https://github.com/nouled-studio/nouPix/issues/new?labels=enhancement&amp;title=Idea%3A%20">
           <b>Request a feature</b><span>Missing something for your installation? Describe the job you need to get done.</span><span class="np-go">Suggest a feature →</span>
         </a>
+        <a class="np-cut" href="https://discord.gg/fF9dY269U" rel="noopener">
+          <b>Community</b><span>Talk about nouPix on Discord: ask questions, share your installations and ideas with other users.</span><span class="np-go">Join the Discord →</span>
+        </a>
       </div>
       <p class="np-helpnote">The essentials are also in the <a data-np-href="#readme" href="https://github.com/nouled-studio/nouPix#readme">README</a>, every feature in detail in the <a data-np-href="/blob/main/docs/user-guide.md" href="https://github.com/nouled-studio/nouPix/blob/main/docs/user-guide.md">full reference</a>. Reports and requests live on GitHub; you need a free GitHub account. Check the <a data-np-href="/issues" href="https://github.com/nouled-studio/nouPix/issues">open issues</a> first: yours may be there already.</p>
     </div>
@@ -722,6 +727,7 @@
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source</a>
         <a data-np-href="/blob/main/docs/nouPix-getting-started.pdf" href="https://github.com/nouled-studio/nouPix/blob/main/docs/nouPix-getting-started.pdf">Manual (PDF)</a>
         <a data-np-href="/issues" href="https://github.com/nouled-studio/nouPix/issues">Issues</a>
+        <a href="https://discord.gg/fF9dY269U" rel="noopener">Discord</a>
         <a href="#np-licence">Licence</a>
         <a href="https://www.nouled.com">nouled.com</a>
       </nav>
