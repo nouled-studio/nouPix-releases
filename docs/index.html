@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>nouPix · free, open-source LED pixel mapping</title>
-<meta name="description" content="nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in zones and layers, and sends it all out over Art-Net. Free and open source (AGPL-3.0), for macOS, Windows, Linux and Raspberry Pi.">
+<meta name="description" content="nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in zones and layers, and sends it all out over Art-Net or sACN. Free and open source (AGPL-3.0), for macOS, Windows, Linux and Raspberry Pi.">
 <meta property="og:title" content="nouPix · free, open-source LED pixel mapping">
-<meta property="og:description" content="Map LED fixtures, play effects in zones and layers, send Art-Net. Free and open source.">
+<meta property="og:description" content="Map LED fixtures, play effects in zones and layers, send Art-Net or sACN. Free and open source.">
 <meta property="og:image" content="https://noupix.nouled.com/img/og.jpg">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -223,7 +223,7 @@
 @media (max-width:900px){#noupix .np-zones{padding:44px 20px 32px}#noupix .np-zgrid{grid-template-columns:minmax(0,1fr)}#noupix .np-zstage{grid-template-columns:minmax(0,1fr)}#noupix .np-panel{width:min(360px,100%);margin-left:auto}#noupix .np-znums{grid-template-columns:minmax(0,1fr);margin-top:40px}}
 
 /* coming next */
-#noupix .np-next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line2);border-left:1px solid var(--line2)}
+#noupix .np-next{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line2);border-left:1px solid var(--line2)}
 #noupix .np-next li{position:relative;padding:30px 28px 32px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);background:var(--bg)}
 #noupix .np-next svg{width:56px;height:56px;margin-bottom:22px}
 #noupix .np-next b{display:block;font:700 22px/1.1 var(--label);letter-spacing:.04em;text-transform:uppercase}
@@ -233,7 +233,7 @@
 #noupix .np-next li.np-more b{color:var(--text2)}
 #noupix .np-next li.np-more a{display:inline-block;margin-top:14px;font:400 13px/1 var(--mono);color:var(--red)}
 #noupix .np-nextnote{margin-top:18px;font:300 13px/1.5 var(--mono);color:var(--muted)}
-@media (max-width:900px){#noupix .np-next{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1100px){#noupix .np-next{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){#noupix .np-next{grid-template-columns:minmax(0,1fr)}}
 
 /* download */
@@ -347,12 +347,12 @@
     <div class="np-wrap">
       <p class="np-label"><span class="np-red">LED pixel mapping</span> · Art&#8209;Net · Free &amp; open source</p>
       <h1><span>Draw it.</span><span class="np-dim">Patch it.</span><span>Light it<span class="np-r" style="display:inline">.</span></span></h1>
-      <p class="np-lede">nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in <b>zones and layers</b>, and sends it all out over Art-Net. <b>Free and open source</b>, for macOS, Windows, Linux and Raspberry Pi.</p>
+      <p class="np-lede">nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in <b>zones and layers</b>, and sends it all out over Art-Net or sACN. <b>Free and open source</b>, for macOS, Windows, Linux and Raspberry Pi.</p>
       <div class="np-cta">
         <a class="np-btn primary" href="#np-download">Download free <span class="np-arrow">↓</span></a>
         <a class="np-btn" data-np-href="" href="https://github.com/nouled-studio/nouPix">Source on GitHub <span class="np-arrow">↗</span></a>
       </div>
-      <p class="np-meta"><span data-np="version">v1.0.1</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
+      <p class="np-meta"><span data-np="version">v1.2.2</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
     </div>
     <div class="np-wrap">
       <div class="np-zone np-shotwrap">
@@ -367,10 +367,10 @@
     <div class="np-wrap">
       <div class="np-facts">
         <ul>
-          <li><b>32</b><span>built-in effects</span></li>
+          <li><b>53</b><span>built-in effects</span></li>
           <li><b>Layers</b><span>in zones, 8 blend modes</span></li>
           <li><b>8 / 16-bit</b><span>fixtures and dimming curves</span></li>
-          <li><b>Art&#8209;Net</b><span>out, with node discovery</span></li>
+          <li><b>Art&#8209;Net / sACN</b><span>out, with node discovery</span></li>
           <li><b>MIDI</b><span>learn, patch bay, macros</span></li>
           <li><b>Remote</b><span>phones and tablets</span></li>
         </ul>
@@ -423,7 +423,7 @@
             <p class="np-fnum">02 <i>/ Zones &amp; layers</i></p>
             <h3>Split the stage. Stack the looks.</h3>
             <p>A <b>zone</b> is any part of the stage with its own content, scenes, playlists and level. The rings can pulse while the triangle spirals and the matrix runs a checkerboard, each on its own, all at once, from one computer.</p>
-            <p>Inside a zone, <b>layers</b> stack like in a video mixer: each with its own effect, shader, video or capture, opacity and blend mode. Zones overlap too: the upper one covers the lower.</p>
+            <p>Inside a zone, <b>layers</b> stack like in a video mixer: each with its own effect, shader, video, capture or stream, opacity and blend mode. Zones overlap too: the upper one covers the lower.</p>
             <div class="np-blends" aria-label="Blend modes"><span>Alpha</span><span>Add</span><span>Screen</span><span>Multiply</span><span>Subtract</span><span class="on">Lighten</span><span>Darken</span><span>Difference</span></div>
           </div>
           <svg class="np-stack" viewBox="0 0 560 470" role="img" aria-label="A zone exploded into its layers: a red checkerboard at the bottom, a white radar sweep blended with Lighten above it, and the LED pixels of the diamond matrix showing the mix on top">
@@ -476,12 +476,13 @@
         <span class="np-ztag"><b>Zone 03</b> 100% <i>●</i></span>
         <div class="np-ftext">
           <p class="np-fnum">03 <i>/ Play</i></p>
-          <h3>Effects, shaders, video and capture</h3>
+          <h3>Effects, shaders, video, capture and streams</h3>
           <p>From slow washes for architecture to hard chases for a show, on any part of the layout.</p>
           <ul class="np-list">
-            <li>32 built-in effects, sorted by mood, use, look and motion</li>
+            <li>53 built-in effects, sorted by mood, use, look and motion</li>
             <li>Your own ISF shaders, images and video: trim, loop, with or without sound</li>
             <li>Window capture, for example from other VJ software</li>
+            <li><b>NDI and OMT streams in</b> from Resolume, TouchDesigner, OBS and other computers, as a source on any layer</li>
             <li>Macros: speed, intensity, saturation and two colours for every effect at once</li>
           </ul>
         </div>
@@ -516,11 +517,12 @@
         <div class="np-ftext">
           <div>
           <p class="np-fnum">05 <i>/ Patch</i></p>
-          <h3>Patch once. Send Art&#8209;Net</h3>
+          <h3>Patch once. Send Art&#8209;Net or <span style="text-transform:none">sACN</span></h3>
           <p>Drag fixtures onto controller outputs and the addresses follow.</p>
           </div>
           <ul class="np-list">
             <li>Automatic addressing, node discovery and a DMX monitor</li>
+            <li><b>sACN</b> (E1.31) unicast or multicast, with a priority so a lighting desk can take over</li>
             <li>16-bit fixtures, dimming curves, RGBW, gamma and colour trims</li>
             <li>Highlight lights fixtures on site: Trace, Flood, Color check, Spotlight, Pixel finder</li>
             <li>A CSV patch list for the install crew</li>
@@ -577,6 +579,8 @@
             <li>Works offline: fonts and everything else come with the app</li>
             <li>The output keeps running when the window is minimised or covered</li>
             <li>Projects save to a <em>.noupix</em> file you carry to the site, with autosave</li>
+            <li>Media library and packages: one <em>.noupixpkg</em> file with the project and its images and videos, for another computer</li>
+            <li>Shows that start by themselves: a project opens when nouPix starts, and a scene or playlist plays when it opens. For show computers and Raspberry Pis</li>
           </ul>
         </div>
         <figure>
@@ -597,17 +601,11 @@
           <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="#f0f0f0" stroke-width="1.4"><circle cx="28" cy="28" r="22" stroke-dasharray="0 6.9" stroke-linecap="round" stroke-width="3"/><path d="M28,13 V28 L38,34"/></g><circle cx="28" cy="6" r="2.6" fill="#ff3b3b"/></svg>
           <b>Calendar</b><span>Schedule scenes and playlists by time and date: the façade on at sunset, off at midnight, a different show at the weekend.</span></li>
         <li><span class="np-soon">in the works</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="#f0f0f0" stroke-width="1.4"><path d="M6,42 H50" stroke-dasharray="0 5.5" stroke-linecap="round" stroke-width="3"/><path d="M6,28 H50" stroke-dasharray="0 5.5" stroke-linecap="round" stroke-width="3"/><path d="M6,14 H50" stroke-dasharray="0 5.5" stroke-linecap="round" stroke-width="3"/></g><circle cx="39" cy="28" r="2.6" fill="#ff3b3b"/></svg>
-          <b style="text-transform:none">sACN</b><span>Send E1.31 streaming ACN next to Art-Net, for the controllers and networks that speak it.</span></li>
-        <li><span class="np-soon">in the works</span>
           <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="#f0f0f0" stroke-width="1.4"><path d="M8,40 L22,26 L32,34 L48,14"/><rect x="5" y="37" width="6" height="6"/><rect x="45" y="11" width="6" height="6"/></g><rect x="29" y="31" width="6" height="6" fill="#ff3b3b"/></svg>
           <b>OSC</b><span>Drive zones, scenes, playlists and macros from show control, a sequencer or a tablet app.</span></li>
         <li><span class="np-soon">in the works</span>
           <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="#f0f0f0" stroke-width="1.4"><circle cx="28" cy="28" r="20"/><circle cx="28" cy="16" r="2.4"/><circle cx="17" cy="25" r="2.4"/><circle cx="39" cy="25" r="2.4"/><circle cx="21" cy="38" r="2.4"/></g><circle cx="35" cy="38" r="2.6" fill="#ff3b3b"/></svg>
           <b>DMX In</b><span>Take channels from a lighting desk to play scenes and move levels and macros, next to MIDI.</span></li>
-        <li><span class="np-soon">in the works</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="#f0f0f0" stroke-width="1.4"><path d="M6,12 L50,12 L50,38 L44,44 L6,44 Z"/><path d="M24,21 L35,28 L24,35 Z"/></g><rect x="6" y="48" width="44" height="2" fill="#ff3b3b"/></svg>
-          <b>NDI input</b><span>Video from other software or cameras over the network, as a source on any layer.</span></li>
         <li class="np-more">
           <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="#3a3a3a"><circle cx="14" cy="28" r="3"/><circle cx="28" cy="28" r="3"/></g><circle cx="42" cy="28" r="3" fill="#ff3b3b"/></svg>
           <b>And many more</b><span>Missing something for your installation? Say what you need: requests decide what comes next.</span>
@@ -648,7 +646,7 @@
         </a>
       </div>
       <div class="np-dlmeta">
-        <span>Latest: <span data-np="version">v1.0.1</span><span data-np="date"></span></span>
+        <span>Latest: <span data-np="version">v1.2.2</span><span data-np="date"></span></span>
         <a data-np-href="/releases/latest" href="https://github.com/nouled-studio/nouPix/releases/latest">Release notes</a>
         <a data-np-href="/releases" href="https://github.com/nouled-studio/nouPix/releases">All versions</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source code</a>
@@ -660,7 +658,7 @@
         <span class="np-ztag"><b>Source</b> any computer <i>●</i></span>
         <div>
           <h3>Run it from the source</h3>
-          <p>On Linux and the Raspberry Pi, or on any computer, nouPix runs straight from its source: a small Python program serves the interface and sends Art-Net. Nothing to build.</p>
+          <p>On Linux and the Raspberry Pi, or on any computer, nouPix runs straight from its source: a small Python program serves the interface and sends Art-Net or sACN. Nothing to build.</p>
           <p>You need <code>git</code>, Python 3.8 or newer and Chrome, Chromium or Edge. nouPix opens in its own window. Keep the terminal open while it plays: closing it stops the output. <code>python3 noupix.py --help</code> lists the options, for example <code>--bind-ip</code> to send from a specific network card.</p>
           <p><a class="np-ul" data-np-href="" href="https://github.com/nouled-studio/nouPix">Browse the code on GitHub ↗</a></p>
         </div>
@@ -670,7 +668,7 @@
           <pre><code><span class="p">$ </span>git clone <span data-np-clone>https://github.com/nouled-studio/nouPix.git</span>
 <span class="p">$ </span>cd nouPix
 <span class="p">$ </span>python3 noupix.py
-<span class="c">  nouPix 1.0.1
+<span class="c">  nouPix 1.2.2
   Interface   http://127.0.0.1:8080/</span></code></pre>
         </div>
       </div>
@@ -767,7 +765,7 @@
         <a href="#np-licence">Licence</a>
         <a href="https://www.nouled.com">nouled.com</a>
       </nav>
-      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.0.1</span> · free software under the GNU AGPL-3.0</p>
+      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.2.2</span> · free software under the GNU AGPL-3.0</p>
     </div>
   </footer>
 </div>
