@@ -352,7 +352,7 @@
         <a class="np-btn primary" href="#np-download">Download free <span class="np-arrow">↓</span></a>
         <a class="np-btn" data-np-href="" href="https://github.com/nouled-studio/nouPix">Source on GitHub <span class="np-arrow">↗</span></a>
       </div>
-      <p class="np-meta"><span data-np="version">v1.2.2</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
+      <p class="np-meta"><span data-np="version">v1.3.0</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
     </div>
     <div class="np-wrap">
       <div class="np-zone np-shotwrap">
@@ -372,7 +372,7 @@
           <li><b>8 / 16-bit</b><span>fixtures and dimming curves</span></li>
           <li><b>Art&#8209;Net / sACN</b><span>out, with node discovery</span></li>
           <li><b>MIDI</b><span>learn, patch bay, macros</span></li>
-          <li><b>Remote</b><span>phones and tablets</span></li>
+          <li><b>Remote / HTTP</b><span>phones, tablets, show control and building systems</span></li>
         </ul>
       </div>
     </div>
@@ -409,6 +409,8 @@
             <li>Import an SVG drawing of the building as fixtures or as a guide</li>
             <li>Group, lock, align, rotate, resize, copy and paste</li>
             <li>Pixel count, colour order and wiring direction per fixture</li>
+            <li>Lock a strip's pitch and its length sets the pixel count, like a real strip cut to length</li>
+            <li>Dot fixtures for PARs, wall washers and big pixel modules</li>
           </ul>
         </div>
         <figure>
@@ -505,10 +507,11 @@
             <li>Playlists of scenes with play times: in a loop, once, or handing over to another</li>
             <li>Keys 1–9 play the scenes of the selected zone; a separate Scenes window for a second screen</li>
             <li><b>X-Fader</b>: one fader between two zones, with a live preview of each; Mix, Dip or Cut</li>
+            <li>Pictures on scenes: each button shows what it plays</li>
           </ul>
         </div>
         <figure>
-          <div class="np-media np-cut"><img src="img/feature-scenes.webp" width="1572" height="453" loading="lazy" alt="The Scenes panel: the zones Diamond and Prism with five scenes each, their fade times and a Show playlist under each zone; at the bottom the X-Fader, with the previews of Diamond (A) and Prism (B) and its fader a third of the way across"></div>
+          <div class="np-media np-cut"><img src="img/feature-scenes.webp" width="1572" height="453" loading="lazy" alt="The Scenes panel: the zones Diamond and Prism with five scenes each, every scene button showing a picture of what it plays, their fade times and a Show playlist under each zone; at the bottom the X-Fader, with the previews of Diamond (A) and Prism (B) and its fader a third of the way across"></div>
         </figure>
       </article>
 
@@ -543,6 +546,7 @@
             <li>Master, blackout, the X-Fader, group dimmers, zone levels, scenes and playlists</li>
             <li>Macros and any control of an effect; faders pick up where the slider is</li>
             <li>Every mapping as a wire in the patch bay</li>
+            <li><b>Flash</b> pads: a scene, a level or blackout only while held, as on a lighting desk</li>
             <li>No controller at hand? A virtual one on screen</li>
           </ul>
         </div>
@@ -562,6 +566,7 @@
             <li><em>Operator</em>: content, scenes and playlists; the mapping stays locked</li>
             <li><em>Programmer</em>: everything, with a password</li>
             <li>The phone page installs like an app</li>
+            <li><b>HTTP triggers</b>: show control, a Stream Deck, a script or a building management system plays scenes and sets levels with a plain web address</li>
           </ul>
         </div>
         <figure class="np-media np-phone np-cut">
@@ -646,7 +651,7 @@
         </a>
       </div>
       <div class="np-dlmeta">
-        <span>Latest: <span data-np="version">v1.2.2</span><span data-np="date"></span></span>
+        <span>Latest: <span data-np="version">v1.3.0</span><span data-np="date"></span></span>
         <a data-np-href="/releases/latest" href="https://github.com/nouled-studio/nouPix/releases/latest">Release notes</a>
         <a data-np-href="/releases" href="https://github.com/nouled-studio/nouPix/releases">All versions</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source code</a>
@@ -668,7 +673,7 @@
           <pre><code><span class="p">$ </span>git clone <span data-np-clone>https://github.com/nouled-studio/nouPix.git</span>
 <span class="p">$ </span>cd nouPix
 <span class="p">$ </span>python3 noupix.py
-<span class="c">  nouPix 1.2.2
+<span class="c">  nouPix 1.3.0
   Interface   http://127.0.0.1:8080/</span></code></pre>
         </div>
       </div>
@@ -765,7 +770,7 @@
         <a href="#np-licence">Licence</a>
         <a href="https://www.nouled.com">nouled.com</a>
       </nav>
-      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.2.2</span> · free software under the GNU AGPL-3.0</p>
+      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.3.0</span> · free software under the GNU AGPL-3.0</p>
     </div>
   </footer>
 </div>
