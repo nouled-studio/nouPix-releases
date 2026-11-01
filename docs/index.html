@@ -352,7 +352,7 @@
         <a class="np-btn primary" href="#np-download">Download free <span class="np-arrow">↓</span></a>
         <a class="np-btn" data-np-href="" href="https://github.com/nouled-studio/nouPix">Source on GitHub <span class="np-arrow">↗</span></a>
       </div>
-      <p class="np-meta"><span data-np="version">v1.3.0</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
+      <p class="np-meta"><span data-np="version">v1.4.0</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
     </div>
     <div class="np-wrap">
       <div class="np-zone np-shotwrap">
@@ -370,7 +370,7 @@
           <li><b>53</b><span>built-in effects</span></li>
           <li><b>Layers</b><span>in zones, 8 blend modes</span></li>
           <li><b>8 / 16-bit</b><span>fixtures and dimming curves</span></li>
-          <li><b>Art&#8209;Net / sACN</b><span>out, with node discovery</span></li>
+          <li><b>Art&#8209;Net + sACN</b><span>together, with discovery</span></li>
           <li><b>MIDI</b><span>learn, patch bay, macros</span></li>
           <li><b>Remote / HTTP</b><span>phones, tablets, show control and building systems</span></li>
         </ul>
@@ -520,11 +520,13 @@
         <div class="np-ftext">
           <div>
           <p class="np-fnum">05 <i>/ Patch</i></p>
-          <h3>Patch once. Send Art&#8209;Net or <span style="text-transform:none">sACN</span></h3>
+          <h3>Patch once. Send Art&#8209;Net and <span style="text-transform:none">sACN</span></h3>
           <p>Drag fixtures onto controller outputs and the addresses follow.</p>
           </div>
           <ul class="np-list">
-            <li>Automatic addressing, node discovery and a DMX monitor</li>
+            <li><b>Art-Net and sACN together</b>: each controller has its own protocol</li>
+            <li>Outputs by universes or by pixels: give the pixels per output and nouPix works out the universes</li>
+            <li>Automatic addressing, a Discovery window for the devices on the network and a floating DMX monitor</li>
             <li><b>sACN</b> (E1.31) unicast or multicast, with a priority so a lighting desk can take over</li>
             <li>16-bit fixtures, dimming curves, RGBW, gamma and colour trims</li>
             <li>Highlight lights fixtures on site: Trace, Flood, Color check, Spotlight, Pixel finder</li>
@@ -532,7 +534,7 @@
           </ul>
         </div>
         <figure>
-          <div class="np-media np-cut"><img src="img/feature-patch.webp" width="1572" height="416" loading="lazy" alt="The Patch panel: two controllers, the left one at 10.0.0.50 with its outputs, fixtures, universes and channels"></div>
+          <div class="np-media np-cut"><img src="img/feature-patch.webp" width="1572" height="453" loading="lazy" alt="The Patch panel: two controllers, Left on Art-Net and Right on sACN; Right selected, its outputs set by pixels (680 RGB pixels each), with its fixtures, universes and channels"></div>
         </figure>
       </article>
 
@@ -651,7 +653,7 @@
         </a>
       </div>
       <div class="np-dlmeta">
-        <span>Latest: <span data-np="version">v1.3.0</span><span data-np="date"></span></span>
+        <span>Latest: <span data-np="version">v1.4.0</span><span data-np="date"></span></span>
         <a data-np-href="/releases/latest" href="https://github.com/nouled-studio/nouPix/releases/latest">Release notes</a>
         <a data-np-href="/releases" href="https://github.com/nouled-studio/nouPix/releases">All versions</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source code</a>
@@ -673,7 +675,7 @@
           <pre><code><span class="p">$ </span>git clone <span data-np-clone>https://github.com/nouled-studio/nouPix.git</span>
 <span class="p">$ </span>cd nouPix
 <span class="p">$ </span>python3 noupix.py
-<span class="c">  nouPix 1.3.0
+<span class="c">  nouPix 1.4.0
   Interface   http://127.0.0.1:8080/</span></code></pre>
         </div>
       </div>
@@ -770,7 +772,7 @@
         <a href="#np-licence">Licence</a>
         <a href="https://www.nouled.com">nouled.com</a>
       </nav>
-      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.3.0</span> · free software under the GNU AGPL-3.0</p>
+      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.4.0</span> · free software under the GNU AGPL-3.0</p>
     </div>
   </footer>
 </div>
