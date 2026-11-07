@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>nouPix · free, open-source LED pixel mapping</title>
-<meta name="description" content="nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in zones and layers, and sends it all out over Art-Net or sACN. Free and open source (AGPL-3.0), for macOS, Windows, Linux and Raspberry Pi.">
+<meta name="description" content="nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in zones and layers, follows the music, and sends it all out over Art-Net, sACN or DDP. Free and open source (AGPL-3.0), for macOS, Windows, Linux and Raspberry Pi.">
 <meta property="og:title" content="nouPix · free, open-source LED pixel mapping">
-<meta property="og:description" content="Map LED fixtures, play effects in zones and layers, send Art-Net or sACN. Free and open source.">
+<meta property="og:description" content="Map LED fixtures, play effects in zones and layers, follow the music, send Art-Net, sACN or DDP. Free and open source.">
 <meta property="og:image" content="https://noupix.nouled.com/img/og.jpg">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -347,19 +347,19 @@
     <div class="np-wrap">
       <p class="np-label"><span class="np-red">LED pixel mapping</span> · Art&#8209;Net · Free &amp; open source</p>
       <h1><span>Draw it.</span><span class="np-dim">Patch it.</span><span>Light it<span class="np-r" style="display:inline">.</span></span></h1>
-      <p class="np-lede">nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in <b>zones and layers</b>, and sends it all out over Art-Net or sACN. <b>Free and open source</b>, for macOS, Windows, Linux and Raspberry Pi.</p>
+      <p class="np-lede">nouPix maps your LED fixtures, plays effects, shaders, video and window capture on them in <b>zones and layers</b>, follows the music, and sends it all out over Art-Net, sACN or DDP. <b>Free and open source</b>, for macOS, Windows, Linux and Raspberry Pi.</p>
       <div class="np-cta">
         <a class="np-btn primary" href="#np-download">Download free <span class="np-arrow">↓</span></a>
         <a class="np-btn" data-np-href="" href="https://github.com/nouled-studio/nouPix">Source on GitHub <span class="np-arrow">↗</span></a>
       </div>
-      <p class="np-meta"><span data-np="version">v1.4.0</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
+      <p class="np-meta"><span data-np="version">v1.5.3</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
     </div>
     <div class="np-wrap">
       <div class="np-zone np-shotwrap">
         <span class="np-ztag"><b>Stage</b> Geometry · 4 zones <i>●</i></span>
         <figure class="np-shot">
           <span class="np-tick" aria-hidden="true"></span>
-          <picture><source media="(max-width:700px)" srcset="img/app-hero-m.webp" width="1572" height="1284"><img src="img/app-hero.webp" width="2400" height="1430" alt="nouPix playing a geometric show: concentric rings, nested triangles and a diamond matrix in four zones, red and white; fixture list, stage, scenes with playlists and the Content panel with the layers of the Diamond zone; the X-Fader at the bottom mixes Diamond (A) and Prism (B)"></picture>
+          <picture><source media="(max-width:700px)" srcset="img/app-hero-m.webp" width="1572" height="1284"><img src="img/app-hero.webp" width="2400" height="1430" alt="nouPix playing a geometric show: concentric rings, nested triangles and a diamond matrix in four zones, red and white; fixture list, stage, the scenes of Diamond (A) and Prism (B) side by side with their playlists, the X-Fader under them mixing the two, and the Content panel with the layers of the Diamond zone"></picture>
         </figure>
         <div class="np-shotbar"><span><b>geometry.noupix</b> · 26 fixtures · 1,920 pixels · 14 universes</span><span>4 zones · 7 layers · 20 scenes · 4 playlists</span></div>
       </div>
@@ -367,10 +367,10 @@
     <div class="np-wrap">
       <div class="np-facts">
         <ul>
-          <li><b>53</b><span>built-in effects</span></li>
+          <li><b>70</b><span>built-in effects, music and touch too</span></li>
           <li><b>Layers</b><span>in zones, 8 blend modes</span></li>
           <li><b>8 / 16-bit</b><span>fixtures and dimming curves</span></li>
-          <li><b>Art&#8209;Net + sACN</b><span>together, with discovery</span></li>
+          <li><b>Art&#8209;Net · sACN · DDP</b><span>together, with discovery</span></li>
           <li><b>MIDI</b><span>learn, patch bay, macros</span></li>
           <li><b>Remote / HTTP</b><span>phones, tablets, show control and building systems</span></li>
         </ul>
@@ -396,7 +396,7 @@
   <section class="np-sec" id="np-features">
     <div class="np-wrap">
       <div class="np-sechead"><span class="np-mono">//</span><h2>What it does</h2></div>
-      <p class="np-secsub">Every picture and film on this page was made in nouPix itself, with one project: four zones of geometry, red and white.</p>
+      <p class="np-secsub">Every picture and film on this page was made in nouPix itself, most with one project: four zones of geometry, red and white.</p>
 
       <article class="np-feat np-zone">
         <span class="np-ztag"><b>Zone 01</b> 100% <i>●</i></span>
@@ -481,7 +481,7 @@
           <h3>Effects, shaders, video, capture and streams</h3>
           <p>From slow washes for architecture to hard chases for a show, on any part of the layout.</p>
           <ul class="np-list">
-            <li>53 built-in effects, sorted by mood, use, look and motion</li>
+            <li>70 built-in effects, sorted by mood, use, look and motion</li>
             <li>Your own ISF shaders, images and video: trim, loop, with or without sound</li>
             <li>Window capture, for example from other VJ software</li>
             <li><b>NDI and OMT streams in</b> from Resolume, TouchDesigner, OBS and other computers, as a source on any layer</li>
@@ -494,54 +494,92 @@
         </figure>
       </article>
 
-      <article class="np-feat np-wide np-zone">
-        <span class="np-ztag"><b>Zone 04</b> 100% <i>●</i></span>
+      <article class="np-feat np-zone">
+        <span class="np-ztag"><b>Zone 04</b> 124 bpm <i>●</i></span>
         <div class="np-ftext">
-          <div>
-          <p class="np-fnum">04 <i>/ Scenes</i></p>
-          <h3>Store a look. Fade back to it</h3>
-          <p>Build the show once, then play it by hand or let it run by itself.</p>
-          </div>
+          <p class="np-fnum">04 <i>/ Music</i></p>
+          <h3>Follow the music</h3>
+          <p>nouPix listens to a sound input and finds the beat, or you tap it. The lights pulse, chase and swell with the music.</p>
           <ul class="np-list">
-            <li>Scenes per zone with crossfades; the fade time sits on each scene</li>
-            <li>Playlists of scenes with play times: in a loop, once, or handing over to another</li>
-            <li>Keys 1–9 play the scenes of the selected zone; a separate Scenes window for a second screen</li>
-            <li><b>X-Fader</b>: one fader between two zones, with a live preview of each; Mix, Dip or Cut</li>
-            <li>Snapshots on scenes: each button shows what it plays</li>
+            <li><b>Tempo</b> from any sound input: it follows the kick, holds through breaks and build-ups, and moves to the next track's tempo by itself</li>
+            <li>Or tap it, with a button or a MIDI pad; Downbeat puts beat 1 where you want it</li>
+            <li>12 effects on the beat, the bass or the part of the spectrum you choose, from hard strobes to slow atmospheric ones</li>
+            <li><b>Fixture Chase</b>: your groups or fixtures one after another on the beat, on its own or as a mask over any content</li>
+            <li>Your own ISF shaders follow it too</li>
           </ul>
         </div>
         <figure>
-          <div class="np-media np-cut"><img src="img/feature-scenes.webp" width="1572" height="453" loading="lazy" alt="The Scenes panel: the zones Diamond and Prism with five scenes each, every scene button showing a snapshot of what it plays, their fade times and a Show playlist under each zone; at the bottom the X-Fader, with the previews of Diamond (A) and Prism (B) and its fader a third of the way across"></div>
+          <div class="np-media np-cut"><img src="img/feature-music.webp" width="2180" height="1600" loading="lazy" alt="The Fixture Chase over a rainbow, filling the fixtures one by one on the beat, with its settings in the Content tab: steps by fixture, following a tapped 124 BPM"></div>
+        </figure>
+      </article>
+
+      <article class="np-feat np-flip np-zone">
+        <span class="np-ztag"><b>Zone 05</b> touch <i>●</i></span>
+        <div class="np-ftext">
+          <p class="np-fnum">05 <i>/ Touch</i></p>
+          <h3>Let people play with the light</h3>
+          <p>Interactive effects drift by themselves and follow a finger: the visitors stir the light on the façade.</p>
+          <ul class="np-list">
+            <li>Blobs, clouds, particles, ripples and smoke: a swipe keeps swirling after the finger lifts</li>
+            <li>A pad on the computer, with the mouse or a touch screen</li>
+            <li>Or a phone: <b>Interact</b> on the Remote page makes it a full-screen pad, with the fixtures on it</li>
+            <li>Several people can play at once</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="np-media np-cut"><img src="img/feature-touch.webp" width="2180" height="1600" loading="lazy" alt="Touch Smoke: the smoke a finger stirred, curling and rising across the LED strips, with Interact in the effect's Parameters"></div>
         </figure>
       </article>
 
       <article class="np-feat np-wide np-zone">
-        <span class="np-ztag"><b>Zone 05</b> 100% <i>●</i></span>
+        <span class="np-ztag"><b>Zone 06</b> 100% <i>●</i></span>
         <div class="np-ftext">
           <div>
-          <p class="np-fnum">05 <i>/ Patch</i></p>
-          <h3>Patch once. Send Art&#8209;Net and <span style="text-transform:none">sACN</span></h3>
+          <p class="np-fnum">06 <i>/ Scenes</i></p>
+          <h3>Store a look. Fade back to it</h3>
+          <p>Build the show once, then play it by hand or let it run by itself.</p>
+          </div>
+          <ul class="np-list">
+            <li>Scenes per zone with crossfades; the fade time sits on each scene, and the scene playing keeps what you change live</li>
+            <li>Playlists of scenes with play times: in a loop, once, or handing over to another; each step's fade and play time on it, dragged or typed</li>
+            <li>Keys 1–9 play the scenes of the selected zone; a separate Scenes window for a second screen</li>
+            <li><b>X-Fader</b>: one fader between two zones, their scenes side by side, with a live preview of each; Mix, Dip or Cut</li>
+            <li>Snapshots on scenes: each button shows what it plays</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="np-media np-cut"><img src="img/feature-scenes.webp" width="1572" height="453" loading="lazy" alt="The Scenes panel with the X-Fader on: Diamond (A) on the left and Prism (B) on the right, side by side, each with its level, + Store, its scenes in snapshots with their fade times and a Show playlist; at the bottom the X-Fader, with the previews of Diamond and Prism and its fader a third of the way across"></div>
+        </figure>
+      </article>
+
+      <article class="np-feat np-wide np-zone">
+        <span class="np-ztag"><b>Zone 07</b> 100% <i>●</i></span>
+        <div class="np-ftext">
+          <div>
+          <p class="np-fnum">07 <i>/ Patch</i></p>
+          <h3>Patch once. Send Art&#8209;Net, <span style="text-transform:none">sACN</span> and DDP</h3>
           <p>Drag fixtures onto controller outputs and the addresses follow.</p>
           </div>
           <ul class="np-list">
-            <li><b>Art-Net and sACN together</b>: each controller has its own protocol</li>
+            <li><b>Art-Net, sACN and DDP together</b>: each controller has its own protocol</li>
             <li>Outputs by universes or by pixels: give the pixels per output and nouPix works out the universes</li>
-            <li>Automatic addressing, each output's start and end, a Discovery window for the devices on the network and a Channel monitor in its own window</li>
+            <li>Automatic addressing, each output's start and end, a Discovery window for the devices on the network (WLED too, added filled in) and a Channel monitor in its own window</li>
             <li><b>sACN</b> (E1.31) unicast or multicast, with a priority so a lighting desk can take over</li>
+            <li><b>DDP</b> for WLED, Advatek, Falcon and other pixel controllers: one run of channels, none skipped</li>
             <li>16-bit fixtures, dimming curves, RGBW, gamma and colour trims</li>
             <li>Highlight lights fixtures on site: Trace, Flood, Color check, Spotlight, Pixel finder</li>
             <li>A CSV patch list for the install crew</li>
           </ul>
         </div>
         <figure>
-          <div class="np-media np-cut"><img src="img/feature-patch.webp" width="1572" height="453" loading="lazy" alt="The Patch panel: two controllers, Left on Art-Net and Right on sACN; Right selected, its outputs set by pixels (680 RGB pixels each), with each output's start and end, its fixtures, universes and channels"></div>
+          <div class="np-media np-cut"><img src="img/feature-patch.webp" width="1572" height="453" loading="lazy" alt="The Patch panel: two controllers, Left on Art-Net and Right on DDP; Right selected, its outputs set by pixels (680 RGB pixels each), with each output's first and last channel and its fixtures' channels"></div>
         </figure>
       </article>
 
       <article class="np-feat np-zone np-midi">
-        <span class="np-ztag"><b>Zone 06</b> learn <i>●</i></span>
+        <span class="np-ztag"><b>Zone 08</b> learn <i>●</i></span>
         <div class="np-ftext">
-          <p class="np-fnum">06 <i>/ MIDI</i></p>
+          <p class="np-fnum">08 <i>/ MIDI</i></p>
           <h3>Learn your controller in a second</h3>
           <p>Press Learn, move a fader, click what it should move.</p>
           <ul class="np-list">
@@ -558,13 +596,13 @@
       </article>
 
       <article class="np-feat np-flip np-zone">
-        <span class="np-ztag"><b>Zone 07</b> 100% <i>●</i></span>
+        <span class="np-ztag"><b>Zone 09</b> 100% <i>●</i></span>
         <div class="np-ftext">
-          <p class="np-fnum">07 <i>/ Remote</i></p>
+          <p class="np-fnum">09 <i>/ Remote</i></p>
           <h3>Hand a phone to the end user</h3>
           <p>The people who run the place get the buttons they need, not the mapping. Phones, tablets and other computers on the network log in with a role.</p>
           <ul class="np-list">
-            <li><em>Remote</em>: a simple page to play scenes and playlists and dim each zone, and the X-Fader when you choose</li>
+            <li><em>Remote</em>: a simple page to play scenes and playlists and dim each zone, and the X-Fader when you choose; a full-screen pad for interactive content</li>
             <li><em>Operator</em>: content, scenes and playlists; the mapping stays locked</li>
             <li><em>Programmer</em>: everything, with a password</li>
             <li>The phone page installs like an app</li>
@@ -577,9 +615,9 @@
       </article>
 
       <article class="np-feat np-zone">
-        <span class="np-ztag"><b>Zone 08</b> 100% <i>●</i></span>
+        <span class="np-ztag"><b>Zone 10</b> 100% <i>●</i></span>
         <div class="np-ftext">
-          <p class="np-fnum">08 <i>/ Look</i></p>
+          <p class="np-fnum">10 <i>/ Look</i></p>
           <h3>Black for the show. White for daylight</h3>
           <p>The interface is black, so the light on the stage is the brightest thing on screen. One click turns it white for working outside.</p>
           <ul class="np-list">
@@ -653,7 +691,7 @@
         </a>
       </div>
       <div class="np-dlmeta">
-        <span>Latest: <span data-np="version">v1.4.0</span><span data-np="date"></span></span>
+        <span>Latest: <span data-np="version">v1.5.3</span><span data-np="date"></span></span>
         <a data-np-href="/releases/latest" href="https://github.com/nouled-studio/nouPix/releases/latest">Release notes</a>
         <a data-np-href="/releases" href="https://github.com/nouled-studio/nouPix/releases">All versions</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source code</a>
@@ -665,7 +703,7 @@
         <span class="np-ztag"><b>Source</b> any computer <i>●</i></span>
         <div>
           <h3>Run it from the source</h3>
-          <p>On Linux and the Raspberry Pi, or on any computer, nouPix runs straight from its source: a small Python program serves the interface and sends Art-Net or sACN. Nothing to build.</p>
+          <p>On Linux and the Raspberry Pi, or on any computer, nouPix runs straight from its source: a small Python program serves the interface and sends Art-Net, sACN or DDP. Nothing to build.</p>
           <p>You need <code>git</code>, Python 3.8 or newer and Chrome, Chromium or Edge. nouPix opens in its own window. Keep the terminal open while it plays: closing it stops the output. <code>python3 noupix.py --help</code> lists the options, for example <code>--bind-ip</code> to send from a specific network card.</p>
           <p><a class="np-ul" data-np-href="" href="https://github.com/nouled-studio/nouPix">Browse the code on GitHub ↗</a></p>
         </div>
@@ -675,7 +713,7 @@
           <pre><code><span class="p">$ </span>git clone <span data-np-clone>https://github.com/nouled-studio/nouPix.git</span>
 <span class="p">$ </span>cd nouPix
 <span class="p">$ </span>python3 noupix.py
-<span class="c">  nouPix 1.4.0
+<span class="c">  nouPix 1.5.3
   Interface   http://127.0.0.1:8080/</span></code></pre>
         </div>
       </div>
@@ -772,7 +810,7 @@
         <a href="#np-licence">Licence</a>
         <a href="https://www.nouled.com">nouled.com</a>
       </nav>
-      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.4.0</span> · free software under the GNU AGPL-3.0</p>
+      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.5.3</span> · free software under the GNU AGPL-3.0</p>
     </div>
   </footer>
 </div>
