@@ -11,44 +11,8 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <style>html,body{margin:0;background:#000}</style>
-<!-- Password gate: a light lock, not security. If you where able to find it, you deserve to enter. -->
-<script>var NP_PASS='open-led';try{if(localStorage.getItem('np-pass')!==NP_PASS)document.documentElement.className+=' np-locked'}catch(e){document.documentElement.className+=' np-locked'}</script>
-<style>
-.np-locked #noupix{display:none}
-#np-gate{display:none}
-.np-locked #np-gate{display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px 16px;box-sizing:border-box;background:#000;color:#f0f0f0;font-family:"Saira",system-ui,-apple-system,"Segoe UI",sans-serif}
-#np-gate form{width:100%;max-width:340px;display:flex;flex-direction:column;gap:14px}
-#np-gate h1{margin:0;font:700 28px/1 "Chakra Petch","Saira",system-ui,sans-serif;letter-spacing:.02em}
-#np-gate p{margin:0;color:#8e8e8e;font:300 13px/1.5 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
-#np-gate input{background:#080808;border:1px solid #3a3a3a;color:#f0f0f0;font:400 16px/1 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;padding:12px 14px;outline:none;border-radius:0}
-#np-gate input:focus{border-color:#bdbdbd}
-#np-gate button{background:#ff3b3b;border:0;color:#000;font:700 14px/1 "Chakra Petch","Saira",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:14px;cursor:pointer}
-#np-gate .np-err{color:#ff3b3b;min-height:1.5em}
-</style>
 </head>
 <body>
-<div id="np-gate">
-  <form autocomplete="off">
-    <h1>nouPix</h1>
-    <p>This page isn't public yet. Enter the password to continue.</p>
-    <input type="password" aria-label="Password" placeholder="Password" autofocus>
-    <button type="submit">Enter</button>
-    <p class="np-err" aria-live="polite"></p>
-  </form>
-</div>
-<script>
-(function () {
-  var f = document.querySelector('#np-gate form'), i = f.querySelector('input'), err = f.querySelector('.np-err');
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (i.value.trim().toLowerCase() === NP_PASS) {
-      try { localStorage.setItem('np-pass', NP_PASS); } catch (x) {}
-      document.documentElement.className = document.documentElement.className.replace(/\s*np-locked/g, '');
-      window.dispatchEvent(new Event('resize'));   // the LED canvases measure themselves once visible
-    } else { err.textContent = 'Wrong password'; i.select(); }
-  });
-})();
-</script>
 <!-- nouPix product page · noupix.nouled.com
      The GitHub repo for releases, source, manuals and issues is set ONCE, in data-repo below.
      Every GitHub link on the page is built from it (and also written out in full, so the page works without JavaScript:
@@ -275,7 +239,7 @@
 @media (max-width:900px){#noupix .np-first,#noupix .np-source{grid-template-columns:minmax(0,1fr)}#noupix .np-source{padding:40px 20px 24px}}
 @media (max-width:560px){#noupix .np-dl{grid-template-columns:minmax(0,1fr)}}
 
-/* support */
+/* help */
 #noupix .np-help{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 @media (max-width:1200px){#noupix .np-help{grid-template-columns:repeat(2,minmax(0,1fr))}}
 #noupix .np-help a{display:flex;flex-direction:column;gap:10px;padding:28px 26px;border:1px solid var(--line2);background:var(--bg1);transition:border-color .15s}
@@ -352,7 +316,7 @@
         <a class="np-btn primary" href="#np-download">Download free <span class="np-arrow">↓</span></a>
         <a class="np-btn" data-np-href="" href="https://github.com/nouled-studio/nouPix">Source on GitHub <span class="np-arrow">↗</span></a>
       </div>
-      <p class="np-meta"><span data-np="version">v1.5.4</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
+      <p class="np-meta"><span data-np="version">v1.6.0</span> · macOS 12+ · Windows 10+ · Linux and Raspberry Pi from source · <span class="np-oss">AGPL-3.0</span></p>
     </div>
     <div class="np-wrap">
       <div class="np-zone np-shotwrap">
@@ -383,7 +347,7 @@
       <div>
         <span class="np-badge"><i></i>GNU AGPL-3.0</span>
         <h2 style="margin-top:24px"><span>Free.</span><span class="np-dim">Open source.</span><span>For everyone.</span></h2>
-        <p>nouPix costs nothing, and its <b>full source code is on GitHub</b>. Use it for any job, paid shows included. Read it, learn from it, change it, share it. Whoever shares it must keep it open: <b>the same freedom passes on to everyone who gets a copy</b>.</p>
+        <p>nouPix costs nothing, and its <b>full source code is on GitHub</b>. Read it, learn from it, change it, share it. Whoever shares it must keep it open: <b>the same freedom passes on to everyone who gets a copy</b>.</p>
         <div class="np-cta">
           <a class="np-btn" data-np-href="" href="https://github.com/nouled-studio/nouPix">Read the source <span class="np-arrow">↗</span></a>
           <a class="np-btn" href="#np-licence">The licence <span class="np-arrow">↓</span></a>
@@ -553,10 +517,34 @@
       </article>
 
       <article class="np-feat np-wide np-zone">
-        <span class="np-ztag"><b>Zone 07</b> 100% <i>●</i></span>
+        <span class="np-ztag"><b>Zone 07</b> beta <i>●</i></span>
         <div class="np-ftext">
           <div>
-          <p class="np-fnum">07 <i>/ Patch</i></p>
+          <p class="np-fnum">07 <i>/ Cues &amp; timeline</i></p>
+          <h3>Run the show cue by cue, or on a timeline</h3>
+          <p>Two new ways to play scenes, both in beta: try them, and say on GitHub what you miss.</p>
+          </div>
+          <ul class="np-list">
+            <li><b>Cue lists</b>: GO (or Space) plays the cue on standby. A cue plays scenes in the zones you choose, takes their levels somewhere and sets effects' controls, all over its fade</li>
+            <li>A cue can go on to the next, or to another, by itself after a wait; Back and Stop; as many cue lists as you like</li>
+            <li><b>Timeline</b>: scenes as clips on a track per zone, in time with an audio file and its waveform</li>
+            <li>Clips fade in and out, crossfade into each other and stack on lanes; loop it all or a region; the ruler in seconds or bars</li>
+            <li>The Scenes, Cue lists and Timeline panels can each move to the left or right side, as one more tab</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="np-media np-cut"><img src="img/feature-timeline.webp" width="1572" height="760" loading="lazy" alt="The Timeline: an audio file's waveform on top, and a track per zone (Diamond, Prism on two lanes, Rings, Lines) with scene clips showing their snapshots, fading and crossfading, the ruler in bars and the playhead in red"></div>
+        </figure>
+        <figure>
+          <div class="np-media np-cut"><img src="img/feature-cues.webp" width="1572" height="570" loading="lazy" alt="A cue list, Opening night: GO, cue 3 on standby outlined in red, cue 2 playing in white with its progress line and going on by itself, and each cue's actions, fade and what comes after"></div>
+        </figure>
+      </article>
+
+      <article class="np-feat np-wide np-zone">
+        <span class="np-ztag"><b>Zone 08</b> 100% <i>●</i></span>
+        <div class="np-ftext">
+          <div>
+          <p class="np-fnum">08 <i>/ Patch</i></p>
           <h3>Patch once. Send Art&#8209;Net, <span style="text-transform:none">sACN</span> and DDP</h3>
           <p>Drag fixtures onto controller outputs and the addresses follow.</p>
           </div>
@@ -568,7 +556,7 @@
             <li><b>DDP</b> for WLED, Advatek, Falcon and other pixel controllers: one run of channels, none skipped</li>
             <li>16-bit fixtures, dimming curves, RGBW, gamma and colour trims</li>
             <li>Highlight lights fixtures on site: Trace, Flood, Color check, Spotlight, Pixel finder</li>
-            <li>A CSV patch list for the install crew</li>
+            <li>A CSV patch list to print or share</li>
           </ul>
         </div>
         <figure>
@@ -577,9 +565,9 @@
       </article>
 
       <article class="np-feat np-zone np-midi">
-        <span class="np-ztag"><b>Zone 08</b> learn <i>●</i></span>
+        <span class="np-ztag"><b>Zone 09</b> learn <i>●</i></span>
         <div class="np-ftext">
-          <p class="np-fnum">08 <i>/ MIDI</i></p>
+          <p class="np-fnum">09 <i>/ MIDI</i></p>
           <h3>Learn your controller in a second</h3>
           <p>Press Learn, move a fader, click what it should move.</p>
           <ul class="np-list">
@@ -596,11 +584,11 @@
       </article>
 
       <article class="np-feat np-flip np-zone">
-        <span class="np-ztag"><b>Zone 09</b> 100% <i>●</i></span>
+        <span class="np-ztag"><b>Zone 10</b> 100% <i>●</i></span>
         <div class="np-ftext">
-          <p class="np-fnum">09 <i>/ Remote</i></p>
-          <h3>Hand a phone to the end user</h3>
-          <p>The people who run the place get the buttons they need, not the mapping. Phones, tablets and other computers on the network log in with a role.</p>
+          <p class="np-fnum">10 <i>/ Remote</i></p>
+          <h3>Play it from a phone</h3>
+          <p>Phones, tablets and other computers on the network log in with a role, and each role gets the buttons it needs.</p>
           <ul class="np-list">
             <li><em>Remote</em>: a simple page to play scenes and playlists and dim each zone, and the X-Fader when you choose; a full-screen pad for interactive content</li>
             <li><em>Operator</em>: content, scenes and playlists; the mapping stays locked</li>
@@ -615,9 +603,9 @@
       </article>
 
       <article class="np-feat np-zone">
-        <span class="np-ztag"><b>Zone 10</b> 100% <i>●</i></span>
+        <span class="np-ztag"><b>Zone 11</b> 100% <i>●</i></span>
         <div class="np-ftext">
-          <p class="np-fnum">10 <i>/ Look</i></p>
+          <p class="np-fnum">11 <i>/ Look</i></p>
           <h3>Black for the show. White for daylight</h3>
           <p>The interface is black, so the light on the stage is the brightest thing on screen. One click turns it white for working outside.</p>
           <ul class="np-list">
@@ -653,7 +641,7 @@
           <b>DMX In</b><span>Take channels from a lighting desk to play scenes and move levels and macros, next to MIDI.</span></li>
         <li class="np-more">
           <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="#3a3a3a"><circle cx="14" cy="28" r="3"/><circle cx="28" cy="28" r="3"/></g><circle cx="42" cy="28" r="3" fill="#ff3b3b"/></svg>
-          <b>And many more</b><span>Missing something for your installation? Say what you need: requests decide what comes next.</span>
+          <b>And many more</b><span>Missing something? Ideas and requests help decide what comes next.</span>
           <a data-np-href="/issues/new?labels=enhancement&amp;title=Idea%3A%20" href="https://github.com/nouled-studio/nouPix/issues/new?labels=enhancement&amp;title=Idea%3A%20">Request a feature →</a></li>
       </ul>
       <p class="np-nextnote">Plans, not promises: what comes first, and when, can change.</p>
@@ -691,7 +679,7 @@
         </a>
       </div>
       <div class="np-dlmeta">
-        <span>Latest: <span data-np="version">v1.5.4</span><span data-np="date"></span></span>
+        <span>Latest: <span data-np="version">v1.6.0</span><span data-np="date"></span></span>
         <a data-np-href="/releases/latest" href="https://github.com/nouled-studio/nouPix/releases/latest">Release notes</a>
         <a data-np-href="/releases" href="https://github.com/nouled-studio/nouPix/releases">All versions</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source code</a>
@@ -713,7 +701,7 @@
           <pre><code><span class="p">$ </span>git clone <span data-np-clone>https://github.com/nouled-studio/nouPix.git</span>
 <span class="p">$ </span>cd nouPix
 <span class="p">$ </span>python3 noupix.py
-<span class="c">  nouPix 1.5.4
+<span class="c">  nouPix 1.6.0
   Interface   http://127.0.0.1:8080/</span></code></pre>
         </div>
       </div>
@@ -728,7 +716,7 @@
 
   <section class="np-sec" id="np-help">
     <div class="np-wrap">
-      <div class="np-sechead"><span class="np-mono">//</span><h2>Manual &amp; support</h2></div>
+      <div class="np-sechead"><span class="np-mono">//</span><h2>Manual &amp; help</h2></div>
       <div class="np-help">
         <a class="np-cut" data-np-href="/blob/main/docs/nouPix-getting-started.pdf" href="https://github.com/nouled-studio/nouPix/blob/main/docs/nouPix-getting-started.pdf">
           <b>Manual</b><span>Getting started, step by step with pictures: from an empty project to a running show. PDF.</span><span class="np-go">Open the manual (PDF) →</span>
@@ -737,13 +725,13 @@
           <b>Report a bug</b><span>Say what you did, what happened and what you expected. Your nouPix version and computer help a lot.</span><span class="np-go">Open a bug report →</span>
         </a>
         <a class="np-cut" data-np-href="/issues/new?labels=enhancement&amp;title=Idea%3A%20" href="https://github.com/nouled-studio/nouPix/issues/new?labels=enhancement&amp;title=Idea%3A%20">
-          <b>Request a feature</b><span>Missing something for your installation? Describe the job you need to get done.</span><span class="np-go">Suggest a feature →</span>
+          <b>Request a feature</b><span>Missing something? Describe what you'd like nouPix to do.</span><span class="np-go">Suggest a feature →</span>
         </a>
         <a class="np-cut" href="https://discord.gg/fF9dY269U" rel="noopener">
           <b>Community</b><span>Talk about nouPix on Discord: ask questions, share your installations and ideas with other users.</span><span class="np-go">Join the Discord →</span>
         </a>
       </div>
-      <p class="np-helpnote">The essentials are also in the <a data-np-href="#readme" href="https://github.com/nouled-studio/nouPix#readme">README</a>, every feature in detail in the <a data-np-href="/blob/main/docs/user-guide.md" href="https://github.com/nouled-studio/nouPix/blob/main/docs/user-guide.md">full reference</a>. Reports and requests live on GitHub; you need a free GitHub account. Check the <a data-np-href="/issues" href="https://github.com/nouled-studio/nouPix/issues">open issues</a> first: yours may be there already.</p>
+      <p class="np-helpnote">The essentials are also in the <a data-np-href="#readme" href="https://github.com/nouled-studio/nouPix#readme">README</a>, every feature in detail in the <a data-np-href="/blob/main/docs/user-guide.md" href="https://github.com/nouled-studio/nouPix/blob/main/docs/user-guide.md">full reference</a>. nouPix is a free project with no support service: report bugs and requests on GitHub (you need a free GitHub account). Check the <a data-np-href="/issues" href="https://github.com/nouled-studio/nouPix/issues">open issues</a> first: yours may be there already.</p>
     </div>
   </section>
 
@@ -756,7 +744,7 @@
           <span class="np-ztag"><b>Free</b> what you may do</span>
           <h3>Free and open source</h3>
           <ul>
-            <li><b>Use it for free, for anything</b>: personal work, commercial installations and paid shows, on as many computers as you like.</li>
+            <li><b>Use it for free, for anything</b>, on as many computers as you like.</li>
             <li><b>Read the source</b>, learn from it and change it for your own needs.</li>
             <li><b>Share it</b>, changed or not, under the terms next to this.</li>
             <li>What you make with it, your projects, layouts and shows, is yours.</li>
@@ -810,7 +798,7 @@
         <a href="#np-licence">Licence</a>
         <a href="https://www.nouled.com">nouled.com</a>
       </nav>
-      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.5.4</span> · free software under the GNU AGPL-3.0</p>
+      <p class="np-copy">© 2026 NOULED.STUDIO · nouPix <span data-np="version">v1.6.0</span> · free software under the GNU AGPL-3.0</p>
     </div>
   </footer>
 </div>
