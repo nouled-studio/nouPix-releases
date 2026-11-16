@@ -43,6 +43,7 @@
 #noupix .np-hl{color:var(--text)}
 #noupix .np-ul{color:var(--text);border-bottom:1px solid var(--line3);transition:border-color .15s}
 #noupix .np-ul:hover{border-bottom-color:var(--red)}
+#noupix .np-flink{margin-top:20px;font:400 13px/1.4 var(--mono)}
 /* the 45° cuts of the logo, on frames and buttons */
 #noupix .np-cut{clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)}
 
@@ -240,7 +241,7 @@
 @media (max-width:560px){#noupix .np-dl{grid-template-columns:minmax(0,1fr)}}
 
 /* help */
-#noupix .np-help{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#noupix .np-help{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 @media (max-width:1200px){#noupix .np-help{grid-template-columns:repeat(2,minmax(0,1fr))}}
 #noupix .np-help a{display:flex;flex-direction:column;gap:10px;padding:28px 26px;border:1px solid var(--line2);background:var(--bg1);transition:border-color .15s}
 #noupix .np-help a:hover{border-color:var(--text2)}
@@ -570,11 +571,12 @@
           <p>Press Learn, move a fader, click what it should move.</p>
           <ul class="np-list">
             <li>Master, blackout, the X-Fader, group dimmers, zone levels, scenes and playlists</li>
-            <li>Macros and any control of an effect; faders pick up where the slider is</li>
+            <li>Macros for all zones or one zone, and any control of an effect; faders pick up where the slider is</li>
             <li>Every mapping as a wire in the patch bay</li>
             <li><b>Flash</b> pads: a scene, a level or blackout only while held, as on a lighting desk</li>
             <li>No controller at hand? A virtual one on screen</li>
           </ul>
+          <p class="np-flink"><a class="np-ul" href="manuals/nouPix-midi-mapping.pdf" target="_blank" rel="noopener">MIDI mapping manual (PDF) →</a></p>
         </div>
         <figure>
           <div class="np-media np-cut"><img src="img/feature-midi.webp" width="1920" height="1200" loading="lazy" alt="The MIDI patch bay: controller faders and pads wired to the master, blackout, zone levels, scenes, a macro and the square size of the checkerboard"></div>
@@ -681,7 +683,8 @@
         <a data-np-href="/releases/latest" href="https://github.com/nouled-studio/nouPix/releases/latest">Release notes</a>
         <a data-np-href="/releases" href="https://github.com/nouled-studio/nouPix/releases">All versions</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source code</a>
-        <a data-np-href="/blob/main/docs/nouPix-getting-started.pdf" href="https://github.com/nouled-studio/nouPix/blob/main/docs/nouPix-getting-started.pdf">Getting started (PDF)</a>
+        <a href="manuals/nouPix-getting-started.pdf" target="_blank" rel="noopener">Getting started (PDF)</a>
+        <a href="manuals/nouPix-midi-mapping.pdf" target="_blank" rel="noopener">MIDI mapping (PDF)</a>
         <span>Free. Nothing else to install.</span>
       </div>
 
@@ -716,8 +719,11 @@
     <div class="np-wrap">
       <div class="np-sechead"><span class="np-mono">//</span><h2>Manual &amp; help</h2></div>
       <div class="np-help">
-        <a class="np-cut" data-np-href="/blob/main/docs/nouPix-getting-started.pdf" href="https://github.com/nouled-studio/nouPix/blob/main/docs/nouPix-getting-started.pdf">
+        <a class="np-cut" href="manuals/nouPix-getting-started.pdf" target="_blank" rel="noopener">
           <b>Manual</b><span>Getting started, step by step with pictures: from an empty project to a running show. PDF.</span><span class="np-go">Open the manual (PDF) →</span>
+        </a>
+        <a class="np-cut" href="manuals/nouPix-midi-mapping.pdf" target="_blank" rel="noopener">
+          <b>MIDI mapping</b><span>Learn your controller, macros for all zones or one, how each mapping moves, the patch bay. Four pages. PDF.</span><span class="np-go">Open the MIDI manual (PDF) →</span>
         </a>
         <a class="np-cut" data-np-href="/issues/new?labels=bug&amp;title=Bug%3A%20" href="https://github.com/nouled-studio/nouPix/issues/new?labels=bug&amp;title=Bug%3A%20">
           <b>Report a bug</b><span>Say what you did, what happened and what you expected. Your nouPix version and computer help a lot.</span><span class="np-go">Open a bug report →</span>
@@ -790,7 +796,7 @@
       <nav aria-label="nouPix links">
         <a href="#np-download">Download</a>
         <a data-np-href="" href="https://github.com/nouled-studio/nouPix">Source</a>
-        <a data-np-href="/blob/main/docs/nouPix-getting-started.pdf" href="https://github.com/nouled-studio/nouPix/blob/main/docs/nouPix-getting-started.pdf">Manual (PDF)</a>
+        <a href="manuals/nouPix-getting-started.pdf" target="_blank" rel="noopener">Manual (PDF)</a>
         <a data-np-href="/issues" href="https://github.com/nouled-studio/nouPix/issues">Issues</a>
         <a href="https://discord.gg/fF9dY269U" rel="noopener">Discord</a>
         <a href="#np-licence">Licence</a>
